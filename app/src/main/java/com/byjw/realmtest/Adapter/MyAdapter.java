@@ -17,7 +17,6 @@ import java.util.ArrayList;
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> implements MyAdapterContract.View, MyAdapterContract.Model {
     private Context context;
     private OnItemClickListener onItemClickListener;
-
     private ArrayList<MemberItem> memberItems;
 
     public MyAdapter(Context context) {
@@ -30,7 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> implements MyA
         return new MyViewHolder(context, parent, onItemClickListener);
     }
 
-    // RecyclerView의 getview 부분을 담당하는 부분
+    // RecyclerView의 getView 부분을 담당하는 부분으로, ArrayList로부터 얻게된 정보를 반환해주는 부분
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
         if (myViewHolder == null) return;

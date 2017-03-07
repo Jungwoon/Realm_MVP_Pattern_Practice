@@ -1,12 +1,13 @@
-package com.byjw.realmtest;
+package com.byjw.realmtest.View.Main;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.EditText;
 
-import com.byjw.realmtest.Presenter.MainPresenter;
+import com.byjw.realmtest.View.Main.Presenter.MainPresenter;
 import com.byjw.realmtest.Model.DBHelper;
+import com.byjw.realmtest.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

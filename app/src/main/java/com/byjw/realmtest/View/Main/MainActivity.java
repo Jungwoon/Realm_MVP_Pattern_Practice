@@ -1,4 +1,4 @@
-package com.byjw.realmtest;
+package com.byjw.realmtest.View.Main;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -12,9 +12,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.byjw.realmtest.Adapter.MyAdapter;
-import com.byjw.realmtest.Presenter.MainContract;
-import com.byjw.realmtest.Presenter.MainPresenter;
+import com.byjw.realmtest.View.Main.Presenter.MainContract;
+import com.byjw.realmtest.View.Main.Presenter.MainPresenter;
 import com.byjw.realmtest.Model.DBHelper;
+import com.byjw.realmtest.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
