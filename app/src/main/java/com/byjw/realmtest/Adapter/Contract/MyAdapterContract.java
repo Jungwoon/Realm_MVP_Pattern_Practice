@@ -1,5 +1,6 @@
 package com.byjw.realmtest.Adapter.Contract;
 
+import com.byjw.realmtest.Listener.OnItemClickListener;
 import com.byjw.realmtest.Model.MemberItem;
 
 import java.util.ArrayList;
@@ -12,6 +13,8 @@ public interface MyAdapterContract {
 
     interface View {
 
+        void setOnClickListener(OnItemClickListener onClickListener);
+
         void notifyAdapter();
 
     }
@@ -22,5 +25,6 @@ public interface MyAdapterContract {
 
         void clearItems();
 
+        MemberItem getItem(int position);
     }
 }

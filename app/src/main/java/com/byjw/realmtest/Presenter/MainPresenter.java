@@ -3,6 +3,7 @@ package com.byjw.realmtest.Presenter;
 import android.content.Context;
 
 import com.byjw.realmtest.Adapter.Contract.MyAdapterContract;
+import com.byjw.realmtest.Listener.OnItemClickListener;
 import com.byjw.realmtest.Model.MemberItem;
 import com.byjw.realmtest.Model.DBHelper;
 
@@ -12,7 +13,7 @@ import java.util.ArrayList;
  * Created by jungwoon on 2017. 3. 7..
  */
 
-public class MainPresenter implements MainContract.Presenter {
+public class MainPresenter implements MainContract.Presenter, OnItemClickListener {
 
     private MainContract.View view;
     private MyAdapterContract.View adapterView;
@@ -21,6 +22,8 @@ public class MainPresenter implements MainContract.Presenter {
     @Override
     public void setMyAdapterView(MyAdapterContract.View adapterView) {
         this.adapterView = adapterView;
+
+        this.adapterView.setOnClickListener(this);
     }
 
     @Override
@@ -49,5 +52,11 @@ public class MainPresenter implements MainContract.Presenter {
 
         adapterModel.addItems(memberItems);
         adapterView.notifyAdapter();
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        MemberItem memberItem = adapterModel.getItem(position);
+        view.showToast(memberItem.getIndex());
     }
 }

@@ -12,6 +12,7 @@ public interface MainContract {
 
     interface View {
 
+        void showToast(int index);
     }
 
     interface Presenter {

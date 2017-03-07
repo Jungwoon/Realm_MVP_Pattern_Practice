@@ -128,4 +128,8 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         mainPresenter.detachView();
     }
 
+    @Override
+    public void showToast(int index) {
+        Toast.makeText(this, "(" + index + ") is clicked", Toast.LENGTH_SHORT).show();
+    }
 }
